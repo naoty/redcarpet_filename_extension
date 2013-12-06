@@ -1,0 +1,63 @@
+html {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+body {
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  margin: 50px auto;
+  padding: 20px;
+  width: 680px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 21px;
+}
+
+/*
+ * CODE BLOCK
+ */
+pre {
+    margin: 0;
+    overflow-x: auto;
+    white-space: pre;
+    font-size: 14px;
+    font-family: "Menlo", "Consolas", Courier, Monospace;
+    line-height: 1.5;
+}
+
+div.code-block {
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #FFF;
+}
+
+div.code-header {
+    padding: 3px 0;
+    font-family: "Menlo", "Consolas", Courier, Monospace;
+    line-height: 1.5;
+}
+
+div.code-header span {
+    padding: 3px 10px;
+    background-color: #555;
+}
+
+div.code-body {
+    padding: 10px;
+}

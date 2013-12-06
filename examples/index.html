@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sample</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./syntax.css" />
+</head>
+<body>
+  <h1>Sample</h1>
+
+<p>Amet cupiditate veritatis quam in tempora suscipit aspernatur illum saepe a aspernatur. Praesentium doloremque assumenda iste itaque eligendi eos dignissimos porro debitis? Aliquid amet quasi quia vero omnis animi. Numquam!</p>
+<div class="code-block">
+  <div class="code-header">
+    <span>greeter.rb</span>
+  </div>
+  <div class="code-body">
+    <div class="highlight"><pre><span class="k">class</span> <span class="nc">Greeter</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span><span class="o">.</span><span class="n">capitalize</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">salute</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2">!&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Create a new object</span>
+<span class="n">g</span> <span class="o">=</span> <span class="no">Greeter</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;world&quot;</span><span class="p">)</span>
+
+<span class="c1"># Output &quot;Hello World!&quot;</span>
+<span class="n">g</span><span class="o">.</span><span class="n">salute</span>
+</pre></div>
+  </div>
+</div><div class="code-block">
+  <div class="code-header">
+    <span>SampleApp/AppDelegate.m</span>
+  </div>
+  <div class="code-body">
+    <div class="highlight"><pre><span class="cp">#import &quot;AppDelegate.h&quot;</span>
+
+<span class="k">@implementation</span> <span class="nc">AppDelegate</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span>
+<span class="p">{</span>
+    <span class="c1">// Override point for customization after application launch.</span>
+    <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationWillResignActive:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+<span class="p">{</span>
+    <span class="c1">// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.</span>
+    <span class="c1">// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationDidEnterBackground:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+<span class="p">{</span>
+    <span class="c1">// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. </span>
+    <span class="c1">// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationWillEnterForeground:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+<span class="p">{</span>
+    <span class="c1">// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationDidBecomeActive:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+<span class="p">{</span>
+    <span class="c1">// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationWillTerminate:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+<span class="p">{</span>
+    <span class="c1">// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>
+</pre></div>
+  </div>
+</div><div class="code-block">
+  <div class="code-body">
+    <div class="highlight"><pre><span class="nv">$ </span>git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nv">$ </span><span class="nb">type </span>rbenv
+<span class="c">#=&gt; &quot;rbenv is a function&quot;</span>
+</pre></div>
+  </div>
+</div>
+</body>
+</html>
