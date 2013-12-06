@@ -1,5 +1,5 @@
 require "redcarpet"
-require "pry"
+require "pygments"
 
 module RedcarpetFilenameExtension
   class BlockCodeWithFilename < Redcarpet::Render::HTML
@@ -15,7 +15,7 @@ module RedcarpetFilenameExtension
         rows << %(#{INDENT}</div>)
       end
       rows << %(#{INDENT}<div class="code-body">)
-      rows << %(#{INDENT * 2}<pre>#{code}</pre>)
+      rows << %(#{INDENT * 2}#{Pygments.highlight(code, lexer: language)})
       rows << %(#{INDENT}</div>)
       rows << %(</div>)
       rows.join("\n")

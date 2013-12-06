@@ -8,10 +8,15 @@ describe RedcarpetFilenameExtension::BlockCodeWithFilename do
     Redcarpet::Markdown.new(renderer, fenced_code_blocks: true)
   end
   let(:fixtures_path) { Pathname.new("../fixtures").expand_path(File.dirname(__FILE__)) }
+  let(:sample_path) { fixtures_path.join("sample_with_filename.md") }
+
+  it "generates highlighted block code" do
+    html = markdown.render(sample_path.read)
+    expect(html).to match /<div class="highlight">/
+  end
 
   context "When the block code is given filename" do
     it "generates the header of block code" do
-      sample_path = fixtures_path.join("sample_with_filename.md")
       html = markdown.render(sample_path.read)
       expect(html).to match /<div class="code-block">/
       expect(html).to match /<div class="code-header">/
