@@ -5,6 +5,11 @@ module RedcarpetFilenameExtension
   class BlockCodeWithFilename < Redcarpet::Render::HTML
     INDENT = " " * 2
 
+    def initialize(pyg_opts = {})
+      super
+      @pyg_opts = pyg_opts
+    end
+
     def block_code(code, metadata)
       language, filename = metadata.split(":") if metadata
       rows = []
@@ -15,7 +20,7 @@ module RedcarpetFilenameExtension
         rows << %(#{INDENT}</div>)
       end
       rows << %(#{INDENT}<div class="code-body">)
-      rows << %(#{INDENT * 2}#{Pygments.highlight(code, lexer: language)})
+      rows << %(#{INDENT * 2}#{Pygments.highlight(code, lexer: language, options: @pyg_opts)})
       rows << %(#{INDENT}</div>)
       rows << %(</div>)
       rows.join("\n")
